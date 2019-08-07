@@ -5,6 +5,21 @@
 ### Constructor
 ```
 Textmark(options: Options, container: HTMLElement | CssSelector);
+class Textmark {
+    constructor(options: Options, container: HTMLElement | CssSelector);
+    
+    // 重新设置容器元素
+    container(container: HTMLElement | CssSelector): this;
+    
+    // 重新设置 options
+    setOptions(options: Options): this;
+    
+    // 移除水印后重新生成水印
+    generate(): this;
+    
+    // 移除水印
+    remove(): this;
+}
 
 interface Options {
             text: string[] | string   //                水印文字

@@ -40,6 +40,8 @@ export class Textmark {
         }
 
         this._generateMark();
+
+        return this;
     }
 
     _generateMark (options = this.options) {
@@ -91,15 +93,21 @@ export class Textmark {
     container (container) {
         this.parent = select(container || document.body).node();
         this.parent.appendChild(this.mark.node());
+
+        return this;
     }
 
     setOptions (options) {
         this.options = Object.assign(this.options, options);
         this._generateMark();
+
+        return this;
     }
 
     remove () {
         this.mark.remove();
         this.mark = null;
+
+        return this;
     }
 }
