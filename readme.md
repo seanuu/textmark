@@ -1,5 +1,6 @@
 ### 描述
 文字水印
+![示例](./assets/textmark.png)
 
 ### Constructor
 ```
